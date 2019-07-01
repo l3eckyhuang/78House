@@ -1,0 +1,23 @@
+{
+  "name": "l3eckyhuang.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch style -o style"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l3eckyhuang/78House.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/l3eckyhuang/78House/issues"
+  },
+  "homepage": "https://github.com/l3eckyhuang/78House#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

@@ -50,12 +50,7 @@
 				pagination: {
 					el:
 					 '.swiper-pagination',
-				},
-				// Navigation arrows
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
+				}
 			});
 		});
 	});
@@ -317,26 +312,20 @@
 	<!-- Modal -->
 	<div class="modal fade" id="roomPicsModal" tabindex="-1" role="dialog" aria-labelledby="roomPicsModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="roomPicsModalLabel">房源照片</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<div class="swiper-container">
-					<!-- Additional required wrapper -->
-					<div class="swiper-wrapper align-items-center">
-						<!-- Slides -->
+			</button>
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="swiper-container">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper align-items-center">
+							<!-- Slides -->
+						</div>
+						<!-- If we need pagination -->
+						<div class="swiper-pagination swiper-pagination-white"></div>
 					</div>
-					<!-- If we need navigation buttons -->
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
-					<!-- If we need pagination -->
-					<div class="swiper-pagination"></div>
 				</div>
-			</div>
 			</div>
 		</div>
 	</div>

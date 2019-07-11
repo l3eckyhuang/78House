@@ -182,8 +182,112 @@
 				recommend: '',
 			}
 		];
-		let tour_data = [];
-
+		let tour_data = [
+			{
+				name: '鐵花村音樂聚落',
+				address: '台東縣台東市新生路135巷26號',
+				map: {
+					id: 'ChIJAzKH2hW5bzQRD7rKWL4N5KU',
+					address: '台東縣台東市新生路135巷26號'
+				},
+				img: '鐵花村音樂聚落.jpg',
+				open: '14:30-22:00',
+				rest: '星期一、星期二',
+				phone: '',
+				recommend: '',
+			},
+			{
+				name: '台東森林公園',
+				address: '台東縣台東市華泰路300號',
+				map: {
+					id: 'ChIJx9oJH165bzQRHtM1Bkgvyyo',
+					address: '台東縣台東市華泰路300號'
+				},
+				img: '台東森林公園.jpg',
+				open: '6:00-17:30',
+				rest: '',
+				phone: '089-362025',
+				recommend: '',
+			},
+			{
+				name: '國立臺灣史前文化博物館',
+				address: '台東縣台東市博物館路1號',
+				map: {
+					id: 'ChIJgS3U1LG5bzQRAlR1EkfxCn0',
+					address: '台東縣台東市博物館路1號'
+				},
+				img: '國立臺灣史前文化博物館.jpg',
+				open: '09:00–17:00',
+				rest: '星期一',
+				phone: '089-381166',
+				recommend: '',
+			},
+			{
+				name: '星星部落景觀咖啡',
+				address: '台東縣卑南鄉富源村8鄰富源116-3號',
+				map: {
+					id: 'ChIJuckixHe7bzQROQursUPnkWs',
+					address: '台東縣卑南鄉富源村8鄰富源116-3號'
+				},
+				img: '星星部落景觀咖啡.jpg',
+				open: '18:00–01:30',
+				rest: '星期日',
+				phone: '089-238089',
+				recommend: '',
+			},
+			{
+				name: '多良觀光車站',
+				address: '台東縣太麻里鄉瀧溪路8-1號',
+				map: {
+					id: 'ChIJqza3KrrTbzQRv2vJUxBEm24',
+					address: '台東縣太麻里鄉瀧溪路8-1號'
+				},
+				img: '多良觀光車站.jpg',
+				open: '09:00–06:30',
+				rest: '',
+				phone: '',
+				recommend: '',
+			},
+			{
+				name: '金針山',
+				address: '台東縣金峰鄉',
+				map: {
+					id: 'ChIJAcW9xhHMbzQR-7Fs2UB9ons',
+					address: '台東縣金峰鄉'
+				},
+				img: '金針山.jpg',
+				open: '',
+				rest: '',
+				phone: '',
+				recommend: '',
+			},
+			{
+				name: '伯朗大道',
+				address: '台東縣池上鄉池上伯朗大道',
+				map: {
+					id: 'ChIJZatyKu4JbzQRyHuSojQ6qQ0',
+					address: '台東縣池上鄉池上伯朗大道'
+				},
+				img: '伯朗大道.jpg',
+				open: '',
+				rest: '',
+				phone: '',
+				recommend: '',
+			},
+			{
+				name: '加路蘭海岸',
+				address: '台東縣台東市台11線加路蘭海岸',
+				map: {
+					id: 'ChIJi-zWAl-8bzQROFZaLJml4oo',
+					address: '台東縣台東市台11線加路蘭海岸'
+				},
+				img: '加路蘭海岸.jpg',
+				open: '',
+				rest: '',
+				phone: '',
+				recommend: '',
+			},
+		];
 		$(function(){
 			$("#foods ul").empty();
 			for (let index = 0; index < food_data.length; index++) {
@@ -224,6 +328,51 @@
 							'</li>';
 
 				$("#foods ul").append(html);
+			}
+
+			$("#places ul").empty();
+			for (let index = 0; index < tour_data.length; index++) {
+				const data = tour_data[index];
+				
+				let html = '<li class="card">'+
+							'	<div class="thumbnail">'+
+							'		<img src="img/places/'+ data['img'] +'" class="card-img-top" alt="...">'+
+							'	</div>'+
+							'	<div class="card-body">'+
+							'		<h5 class="card-title">'+ data['name'] +'</h5>'+
+							'		<div class="card-text">'+
+							'			<div class="d-flex">'+
+							'				<div class="info-title">地址：</div>'+
+							'				<div>'+
+							'					<a target="_blank" href="https://www.google.com/maps/search/?api=1&query_place_id='+ data['map']['id'] +'&query='+ data['map']['address'] +'">'+ data['address'] +'</a>'+
+							'				</div>'+
+							'			</div>';
+					if (data['open'] != '') {
+						html += '		<div class="d-flex">'+
+							'				<div class="info-title">時間：</div>'+
+							'				<div>'+ data['open'] +'</div>'+
+							'			</div>';
+					}
+					if (data['rest'] != '') {
+						html += '		<div class="d-flex">'+
+								'			<div class="info-title">公休：</div>'+
+								'			<div>'+ data['rest'] +'</div>'+
+								'		</div>';
+					}
+					if (data['phone'] != '') {
+						html += '		<div class="d-flex">'+
+							'				<div class="info-title">電話：</div>'+
+							'				<div>'+ data['phone'] +'</div>'+
+							'			</div>';
+					}
+					if (data['recommend'] != '') {
+						html += '		<i class="icon-thumbs-up-1"></i>'+ data['recommend'];
+					}
+					html += '		</div>'+
+							'	</div>'+
+							'</li>';
+
+				$("#places ul").append(html);
 			}
 		});
 	</script>
@@ -274,164 +423,7 @@
 	<section id="places">
 		<div class="container">
 			<h2 class="section-title">台東推薦景點</h2>
-			<ul class="place-list card-columns">
-				<li class="card">
-					<div class="thumbnail">
-						<img src="img/place/鐵花村音樂聚落.jpg" class="card-img-top" alt="...">
-					</div>
-					<div class="card-body">
-						<h5 class="card-title">鐵花村音樂聚落</h5>
-						<div class="card-text">
-							<div class="d-flex">
-								<div class="info-title">地址：</div>
-								<div>台東縣台東市新生路135巷26號</div>
-							</div>
-							<div class="d-flex">
-								<div class="info-title">時間：</div>
-								<div>14:30-22:00</div>
-							</div>
-							<div class="d-flex">
-								<div class="info-title">公休：</div>
-								<div>星期一、星期二</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="card">
-					<div class="thumbnail">
-						<img src="img/place/台東森林公園.jpg" class="card-img-top" alt="...">
-					</div>
-					<div class="card-body">
-						<h5 class="card-title">台東森林公園</h5>
-						<div class="card-text">
-							<div class="d-flex">
-								<div class="info-title">地址：</div>
-								<div>台東縣台東市華泰路300號</div>
-							</div>
-							<div class="d-flex">
-								<div class="info-title">時間：</div>
-								<div>6:00-17:30</div>
-							</div>
-							<div class="d-flex">
-								<div class="info-title">電話：</div>
-								<div>089-362025</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="card">
-					<div class="thumbnail">
-						<img src="img/place/國立臺灣史前文化博物館.jpg" class="card-img-top" alt="...">
-					</div>
-					<div class="card-body">
-						<h5 class="card-title">國立臺灣史前文化博物館</h5>
-						<div class="card-text">
-							<div class="d-flex">
-								<div class="info-title">地址：</div>
-								<div>台東縣台東市博物館路1號</div>
-							</div>
-							<div class="d-flex">
-								<div class="info-title">時間：</div>
-								<div>09:00–17:00</div>
-							</div>
-							<div class="d-flex">
-								<div class="info-title">公休：</div>
-								<div>星期一</div>
-							</div>
-							<div class="d-flex">
-								<div class="info-title">電話：</div>
-								<div>089-381166</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="card">
-					<div class="thumbnail">
-						<img src="img/place/星星部落景觀咖啡.jpg" class="card-img-top" alt="...">
-					</div>
-					<div class="card-body">
-						<h5 class="card-title">星星部落景觀咖啡</h5>
-						<div class="card-text">
-							<div class="d-flex">
-								<div class="info-title">地址：</div>
-								<div>954台東縣卑南鄉富源村8鄰富源116-3號</div>
-							</div>
-							<div class="d-flex">
-								<div class="info-title">時間：</div>
-								<div>18:00–01:30</div>
-							</div>
-							<div class="d-flex">
-								<div class="info-title">公休：</div>
-								<div>星期日</div>
-							</div>
-							<div class="d-flex">
-								<div class="info-title">電話：</div>
-								<div>089-238089</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="card">
-					<div class="thumbnail">
-						<img src="img/place/多良觀光車站.jpg" class="card-img-top" alt="...">
-					</div>
-					<div class="card-body">
-						<h5 class="card-title">多良觀光車站</h5>
-						<div class="card-text">
-							<div class="d-flex">
-								<div class="info-title">地址：</div>
-								<div>963台東縣太麻里鄉瀧溪路8-1號</div>
-							</div>
-							<div class="d-flex">
-								<div class="info-title">時間：</div>
-								<div>09:00–06:30</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="card">
-					<div class="thumbnail">
-						<img src="img/place/金針山.jpg" class="card-img-top" alt="...">
-					</div>
-					<div class="card-body">
-						<h5 class="card-title">金針山</h5>
-						<div class="card-text">
-							<div class="d-flex">
-								<div class="info-title">地址：</div>
-								<div>964台東縣金峰鄉</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="card">
-					<div class="thumbnail">
-						<img src="img/place/伯朗大道.jpg" class="card-img-top" alt="...">
-					</div>
-					<div class="card-body">
-						<h5 class="card-title">伯朗大道</h5>
-						<div class="card-text">
-							<div class="d-flex">
-								<div class="info-title">地址：</div>
-								<div>958台東縣池上鄉池上伯朗大道</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="card">
-					<div class="thumbnail">
-						<img src="img/place/加路蘭海岸.jpg" class="card-img-top" alt="...">
-					</div>
-					<div class="card-body">
-						<h5 class="card-title">加路蘭海岸</h5>
-						<div class="card-text">
-							<div class="d-flex">
-								<div class="info-title">地址：</div>
-								<div>台東縣台東市台11線加路蘭海岸</div>
-							</div>
-						</div>
-					</div>
-				</li>
-			</ul>
+			<ul class="place-list card-columns"></ul>
 		</div>
 	</section>
 </body>

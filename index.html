@@ -23,7 +23,17 @@
 	<title>78. HOUSE B&B</title>
 </head>
 <body>
-	<nav class="navbar fixed-top navbar-expand-md navbar-light bg-white">
+	<script>
+	$(function() {
+		$("#room").empty();
+		for (let index = 0; index < 14; index++) {
+			$("#room").append('<li class="col-12 col-sm-6 col-md-4">'+
+							  ' 	<div class="thumbnail"><div class="search"><i class="icon-search"></div></i><img class="w-100" src="img/78housepics/'+ index +'.jpg" alt=""></div>'+
+							  '</li>');
+		}
+	});
+	</script>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
 		<div class="container">
 			<a class="navbar-brand" href="index.html">78. HOUSE B&B</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,8 +41,26 @@
 			</button>
 			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 				<ul class="navbar-nav">
-					<li class="nav-item active">
-						<a class="nav-link" href="index.html">78.house</a>
+					<li class="nav-item">
+						<a class="nav-link" href="#features">我們的特色</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#specials">特別服務</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#album">房源照片</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#bedtype">床型資訊</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#service">設備與服務</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#map">位置</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">聯絡我們</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="guidebook.html">旅遊指南</a>
@@ -49,13 +77,13 @@
 					<p class="welcome-text">welcome to Taitung</p>
 					<h1>78. house</h1>
 					<h2>歡迎來自世界各地的旅客</h2>
-					<a class="mt-4 btn btn-primary btn-lg" href="#" role="button">立即預約</a>
+					<a class="mt-4 btn btn-primary btn-lg" href="https://www.airbnb.com.tw/rooms/24562571?s=67&shared_item_type=1&virality_entry_point=1&sharer_id=124974527" target="_BLANK" role="button">立即預約</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="features">
+	<section id="features" class="features">
 		<div class="container">
 			<h2 class="section-title">78house 特色</h2>
 			<div class="row text-center">
@@ -64,7 +92,7 @@
 						<div class="row align-items-center">
 							<div class="col-12 col-sm-6 col-md-12">
 								<div class="thumbnail">
-									<img src="img/feature_1.jpg" class="w-100">
+									<img src="img/78housepics/8.jpg" class="w-100">
 								</div>
 							</div>
 							<div class="col-12 col-sm-6 col-md-12">
@@ -84,7 +112,7 @@
 						<div class="row align-items-center">
 							<div class="col-12 col-sm-6 col-md-12">
 								<div class="thumbnail">
-									<img src="img/feature_2.jpg" class="w-100">
+									<img src="img/78housepics/1.jpg" class="w-100">
 								</div>
 							</div>
 							<div class="col-12 col-sm-6 col-md-12">
@@ -103,7 +131,7 @@
 						<div class="row align-items-center">
 							<div class="col-12 col-sm-6 col-md-12">
 								<div class="thumbnail">
-									<img src="img/feature_3.jpg" class="w-100">
+									<img src="img/map-locations.jpg" class="w-100">
 								</div>
 							</div>
 							<div class="col-12 col-sm-6 col-md-12">
@@ -123,7 +151,7 @@
 		</div>
 	</section>
 
-	<section class="specials">
+	<section id="specials" class="specials">
 		<div class="container">
 			<h2 class="section-title">78house 特別服務</h2>
 			<div class="row text-center py-5">
@@ -173,56 +201,19 @@
 		</div>
 	</section>
 
-	<section class="album">
+	<section id="album" class="album">
 		<div class="container">
 			<h2 class="section-title">房源照片</h2>
-			<ul class="row album">
-				<li class="col-12 col-sm-6 col-md-4">
-					<div class="thumbnail"><img class="img-fluid" src="https://picsum.photos/800/500" alt=""></div>
-				</li>
-				<li class="col-12 col-sm-6 col-md-4">
-					<div class="thumbnail"><img class="img-fluid" src="https://picsum.photos/800/500" alt=""></div>
-				</li>
-				<li class="col-12 col-sm-6 col-md-4">
-					<div class="thumbnail"><img class="img-fluid" src="https://picsum.photos/800/500" alt=""></div>
-				</li>
-				<li class="col-12 col-sm-6 col-md-4">
-					<div class="thumbnail"><img class="img-fluid" src="https://picsum.photos/800/500" alt=""></div>
-				</li>
-				<li class="col-12 col-sm-6 col-md-4">
-					<div class="thumbnail"><img class="img-fluid" src="https://picsum.photos/800/500" alt=""></div>
-				</li>
-				<li class="col-12 col-sm-6 col-md-4">
-					<div class="thumbnail"><img class="img-fluid" src="https://picsum.photos/800/500" alt=""></div>
-				</li>
-				<li class="col-12 col-sm-6 col-md-4">
-					<div class="thumbnail"><img class="img-fluid" src="https://picsum.photos/800/500" alt=""></div>
-				</li>
-				<li class="col-12 col-sm-6 col-md-4">
-					<div class="thumbnail"><img class="img-fluid" src="https://picsum.photos/800/500" alt=""></div>
-				</li>
-				<li class="col-12 col-sm-6 col-md-4">
-					<div class="thumbnail"><img class="img-fluid" src="https://picsum.photos/800/500" alt=""></div>
-				</li>
-				<li class="col-12 col-sm-6 col-md-4">
-					<div class="thumbnail"><img class="img-fluid" src="https://picsum.photos/800/500" alt=""></div>
-				</li>
-				<li class="col-12 col-sm-6 col-md-4">
-					<div class="thumbnail"><img class="img-fluid" src="https://picsum.photos/800/500" alt=""></div>
-				</li>
-				<li class="col-12 col-sm-6 col-md-4">
-					<div class="thumbnail"><img class="img-fluid" src="https://picsum.photos/800/500" alt=""></div>
-				</li>
-			</ul>
+			<ul id="room" class="row album"></ul>
 		</div>
 	</section>
 
-	<section class="bedtype">
+	<section id="bedtype" class="bedtype text-center">
 		<div class="container">
 			<h2 class="section-title">床型資訊</h2>
 			<div class="row">
-				<div class="col-4">
-					<div class="card">
+				<div class="col-12 col-md-4">
+					<div class="card mb-2">
 						<div class="card-body">
 							<i class="icon-bed"></i>
 							<h5 class="card-title">臥室1</h5>
@@ -230,8 +221,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
-					<div class="card">
+				<div class="col-12 col-md-4">
+					<div class="card mb-2">
 						<div class="card-body">
 							<i class="icon-bed"></i><i class="icon-bed"></i>
 							<h5 class="card-title">臥室2</h5>
@@ -239,8 +230,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
-					<div class="card">
+				<div class="col-12 col-md-4">
+					<div class="card mb-2">
 						<div class="card-body">
 							<i class="icon-couch"></i>
 							<h5 class="card-title">共用空間</h5>
@@ -252,7 +243,7 @@
 		</div>
 	</section>
 
-	<section class="section">
+	<section id="service" class="service">
 		<div class="container">
 			<h2 class="section-title">設備與服務</h2>
 			<ul class="row service-list">
@@ -281,7 +272,7 @@
 			</ul>
 		</div>
 	</section>
-	<section class="map text-center">
+	<section id="map" class="map text-center">
 		<div class="container">
 			<h2 class="section-title">位置</h2>
 			<p>位於台東市中心</p>
@@ -289,7 +280,7 @@
 		</div>
 	</section>
 
-	<section class="contact text-center">
+	<section id="contact" class="contact text-center">
 		<div class="container">
 			<h4>聯絡我們</h4>
 			<p>Phone :<a  href="tel:+886988255440">+886 988255440</a></p>

@@ -58,7 +58,7 @@ section {
     transform: translateY(-50%) !important;
 }
 .modal-body{
-    height: calc(100vh - 2rem);
+    height: calc(100vh - 3rem);
 }
 /* .modal-content{
     height: 100%;

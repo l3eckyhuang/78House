@@ -62,7 +62,7 @@
 				open: '05:30–11:30',
 				rest: '',
 				phone: '089-343148',
-				recommend: '',
+				recommend: '蛋餅、奶茶、滷肉飯加蛋銷魂',
 			},
 			{
 				name: '寶桑湯圓',
@@ -75,7 +75,7 @@
 				open: '14:30–22:00',
 				rest: '',
 				phone: '089-328888',
-				recommend: '',
+				recommend: '綜合湯圓',
 			},
 			{
 				name: '披薩阿伯 Uncle Pete\'s Pizza',
@@ -88,7 +88,7 @@
 				open: '17:00–21:00',
 				rest: '',
 				phone: '0952-179-165',
-				recommend: '',
+				recommend: '充滿異國與中西合璧的披薩店',
 			},
 			{
 				name: '陳記麻糬',
@@ -101,7 +101,7 @@
 				open: '06:30–19:00',
 				rest: '',
 				phone: '089-353286',
-				recommend: '',
+				recommend: '現做麻糬超級好吃唷！',
 			},
 			{
 				name: '人x人',
@@ -127,7 +127,7 @@
 				open: '11:00–14:30 17:30–21:00',
 				rest: '星期一',
 				phone: '089-310869',
-				recommend: '',
+				recommend: '腰內豬排、起司豬排',
 			},
 			{
 				name: '卑南豬血湯老店',
@@ -140,7 +140,7 @@
 				open: '10:00–17:10',
 				rest: '星期二',
 				phone: '089-229043',
-				recommend: '',
+				recommend: '豬血湯、米腸',
 			},
 			{
 				name: '七里坡紅藜養生料理',
@@ -153,7 +153,7 @@
 				open: '11:00–20:30',
 				rest: '星期三',
 				phone: '089-325777',
-				recommend: '',
+				recommend: '紅藜椒麻雞飯',
 			},
 			{
 				name: '客來吃樂 大腸蚵仔麵線',
@@ -166,7 +166,7 @@
 				open: '10:00–20:00',
 				rest: '',
 				phone: '089-343096',
-				recommend: '',
+				recommend: '麵線、綠豆蒜',
 			},
 			{
 				name: '四維路無名黑輪攤',
@@ -179,7 +179,7 @@
 				open: '14:30–18:30',
 				rest: '',
 				phone: '089-310869',
-				recommend: '',
+				recommend: '7元一支、香腸',
 			}
 		];
 		let tour_data = [
@@ -321,7 +321,10 @@
 							'				<div>'+ data['phone'] +'</div>'+
 							'			</div>';
 					if (data['recommend'] != '') {
-						html += '		<i class="icon-thumbs-up-1"></i>'+ data['recommend'];
+						html += '		<div class="d-flex">'+
+								'			<div class="info-title">必推：</div>'+
+								'			<div>'+data['recommend']+'</div>'+
+								'		</div>';
 					}
 					html += '		</div>'+
 							'	</div>'+

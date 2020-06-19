@@ -43,11 +43,12 @@ section {
     font-size: 16px;
     font-family: 'Karla', sans-serif;
     font-weight: 700;
-}
-.btn-primary:hover {
-    border: 2px #262626 solid;
-    background-color: #3f3f3f;
-    color: #fff;
+
+    &:hover {
+        border: 2px #262626 solid;
+        background-color: #3f3f3f;
+        color: #fff;
+    }
 }
 
 .modal .close {
@@ -88,11 +89,9 @@ section {
     text-transform: uppercase;    
 }
 
-
 .banner {
     margin-top: 80px;
 }
-
 
 .jumbotron {
     background-image: url("../img/banner.png");
@@ -128,14 +127,13 @@ h1 {
 
 .feature {
     margin-bottom: 1rem;
-}
-
-.feature h5 {
-    margin-top: 2rem;
-}
-
-.feature img {
-    object-fit: cover; 
+    
+    h5 {
+        margin-top: 2rem;
+    }
+    img {
+        object-fit: cover; 
+    }
 }
 @media (min-width: 576px){
     .feature img  {
@@ -151,13 +149,14 @@ h1 {
 
 .specials{
     background-color: #E6C3C3;
+    
+    p {
+        margin-top: 1.2rem;
+        color: #fff;
+    }
 }
 .special{
     margin-bottom: 2.5rem;
-}
-.specials p{
-    margin-top: 1.2rem;
-    color: #fff;
 }
 .text-box{
     margin-top: 20px;
@@ -180,9 +179,9 @@ h1 {
         }
     }
     .thumbnail img{
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         position: absolute;
-        object-fit: contain;
+        object-fit: cover;
         top: 50%;
         left: 50%;
     }
@@ -312,3 +311,5 @@ h1 {
         column-count: 4;
     }
 }
+
+@import "fullcalendar";

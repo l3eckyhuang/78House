@@ -39,150 +39,72 @@
 		$.ajax({
 			url:"https://www.googleapis.com/calendar/v3/calendars/" + cal_id + "/events?key=" + api_key,
 			success: function(data) {
+				const events = [];
+
 				for (let index = 0; index < data.items.length; index++) {
 					const ele = data.items[index];
 					
+// created: "1900-01-01T12:00:00.000Z"
+// creator: {email: "9cluv8jb2q8b395utgb29vo0bhktg6rd@import.calendar.google.com", displayName: "https://www.airbnb.com.tw/calendar/ical/24562571.ics?s=8c727869cf334df6a0c70b4c4f9dcfde", self: true}
+// description: "Reservation URL: https://www.airbnb.com/reservation/itinerary?code=HMZ399TAYF↵Phone Number (Last 4 Digits): 5815"
+// end: {date: "2020-07-19"}
+// etag: ""3177234786870000""
+// htmlLink: "https://www.google.com/calendar/event?eid=XzY0cTMyZTM2YzhzajhwOXA3MHEycW9oZzZzcmoyZGI1YzRvM2ljajFjbGlqY2NobjZncTMwZDlsNmdzM2llMzFjOG82Nm9qNDgxZ21pc2oyZHBoMnNvcmZkayA5Y2x1djhqYjJxOGIzOTV1dGdiMjl2bzBiaGt0ZzZyZEBp"
+// iCalUID: "1418fb94e984-b07715ea092aee627440554898ab0cbd@airbnb.com"
+// id: "_64q32e36c8sj8p9p70q2qohg6srj2db5c4o3icj1clijcchn6gq30d9l6gs3ie31c8o66oj481gmisj2dph2sorfdk"
+// kind: "calendar#event"
+// organizer: {email: "9cluv8jb2q8b395utgb29vo0bhktg6rd@import.calendar.google.com", displayName: "https://www.airbnb.com.tw/calendar/ical/24562571.ics?s=8c727869cf334df6a0c70b4c4f9dcfde", self: true}
+// sequence: 0
+// start: {date: "2020-07-17"}
+// status: "confirmed"
+// summary: "Reserved"
+// updated: "2020-05-04T18:36:33.435Z"
+
+					events.push({
+						title: 'Reserved',
+						start: ele.start.date,
+						end: ele.end.date,
+						icon: ''
+					});
 					console.log(ele);
-					// console.log(ele.start);
-					// console.log(ele.end);
-					jQuery('#calendar').fullCalendar({
-						themeSystem: 'bootstrap4',
-						// emphasizes business hours
-						businessHours: false,
-						defaultView: 'month',
-						// event dragging & resizing
-						editable: true,
-						// header
-						header: {
-							left: 'title',
-							center: 'month,agendaWeek,agendaDay',
-							right: 'today prev,next'
-						},
-						events: [
-							{
-								title: 'Barber',
-								description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-								start: '2020-05-05',
-								end: '2020-05-05',
-								className: 'fc-bg-default',
-								icon : "circle"
-							},
-							{
-								title: 'Flight Paris',
-								description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-								start: '2020-08-08T14:00:00',
-								end: '2020-08-08T20:00:00',
-								className: 'fc-bg-deepskyblue',
-								icon : "cog",
-								allDay: false
-							},
-							{
-								title: 'Team Meeting',
-								description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-								start: '2020-07-10T13:00:00',
-								end: '2020-07-10T16:00:00',
-								className: 'fc-bg-pinkred',
-								icon : "group",
-								allDay: false
-							},
-							{
-								title: 'Meeting',
-								description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-								start: '2020-08-12',
-								className: 'fc-bg-lightgreen',
-								icon : "suitcase"
-							},
-							{
-								title: 'Conference',
-								description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-								start: '2020-08-13',
-								end: '2020-08-15',
-								className: 'fc-bg-blue',
-								icon : "calendar"
-							},
-							{
-								title: 'Baby Shower',
-								description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-								start: '2020-08-13',
-								end: '2020-08-14',
-								className: 'fc-bg-default',
-								icon : "child"
-							},
-							{
-								title: 'Birthday',
-								description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-								start: '2020-09-13',
-								end: '2020-09-14',
-								className: 'fc-bg-default',
-								icon : "birthday-cake"
-							},
-							{
-								title: 'Restaurant',
-								description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-								start: '2020-10-15T09:30:00',
-								end: '2020-10-15T11:45:00',
-								className: 'fc-bg-default',
-								icon : "glass",
-								allDay: false
-							},
-							{
-								title: 'Dinner',
-								description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-								start: '2020-11-15T20:00:00',
-								end: '2020-11-15T22:30:00',
-								className: 'fc-bg-default',
-								icon : "cutlery",
-								allDay: false
-							},
-							{
-								title: 'Shooting',
-								description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-								start: '2020-08-25',
-								end: '2020-08-25',
-								className: 'fc-bg-blue',
-								icon : "camera"
-							},
-							{
-								title: 'Go Space :)',
-								description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-								start: '2020-12-27',
-								end: '2020-12-27',
-								className: 'fc-bg-default',
-								icon : "rocket"
-							},
-							{
-								title: 'Dentist',
-								description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-								start: '2020-12-29T11:30:00',
-								end: '2020-12-29T012:30:00',
-								className: 'fc-bg-blue',
-								icon : "medkit",
-								allDay: false
-							}
-						],
-						eventRender: function(event, element) {
-							if(event.icon){
-								element.find(".fc-title").prepend("<i class='fa fa-"+event.icon+"'></i>");
-							}
-						},
-						dayClick: function() {
-							jQuery('#modal-view-event-add').modal();
-						},
-						eventClick: function(event, jsEvent, view) {
-								jQuery('.event-icon').html("<i class='fa fa-"+event.icon+"'></i>");
-								jQuery('.event-title').html(event.title);
-								jQuery('.event-body').html(event.description);
-								jQuery('.eventUrl').attr('href',event.url);
-								jQuery('#modal-view-event').modal();
-						},
-					})
+					
 				}
+				$('#calendar').fullCalendar({
+					themeSystem: 'bootstrap4',
+					// emphasizes business hours
+					businessHours: false,
+					defaultView: 'month',
+					// event dragging & resizing
+					editable: true,
+					// header
+					header: {
+						left: 'title',
+						center: 'today prev,next',
+						right: ''
+					},
+					events: events,
+					eventRender: function(event, element) {
+						if(event.icon){
+							element.find(".fc-title").prepend("<i class='fa fa-"+event.icon+"'></i>");
+						}
+					},
+					dayClick: function() {
+						jQuery('#modal-view-event-add').modal();
+					},
+					eventClick: function(event, jsEvent, view) {
+							jQuery('.event-icon').html("<i class='fa fa-"+event.icon+"'></i>");
+							jQuery('.event-title').html(event.title);
+							jQuery('.event-body').html(event.description);
+							jQuery('.eventUrl').attr('href',event.url);
+							jQuery('#modal-view-event').modal();
+					},
+				});
 			}
 		});
 		$("#room").empty();
 		for (let index = 0; index < 14; index++) {
 			$("#room").append('<li class="col-12 col-sm-6 col-md-4">'+
-							  ' 	<div class="thumbnail"><div class="search" data-toggle="modal" data-target="#roomPicsModal" data-index="'+ index +'"><i class="icon-search"></div></i><img class="w-100" src="img/78housepics/'+ index +'.jpg" alt=""></div>'+
+							  ' 	<div class="thumbnail"><div class="search" data-toggle="modal" data-target="#roomPicsModal" data-index="'+ index +'"><i class="icon-search"></div></i><img class="w-100 h-100" src="img/78housepics/'+ index +'.jpg" alt=""></div>'+
 							  '</li>');
 			//swiper photos
 			$(".swiper-wrapper").append('<div class="swiper-slide"><img class="w-100" src="img/78housepics/'+ index +'.jpg" /></div>');
@@ -259,7 +181,7 @@
 	<section class="calenedar">
 		<div class="container">
 			<h2 class="section-title">78house 日曆</h2>
-			<div class="row text-center">
+			<div class="text-center">
 				<div id="calendar"></div>
 			</div>
 		</div>

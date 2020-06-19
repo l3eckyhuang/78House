@@ -243,7 +243,7 @@ h1 {
   .card-columns {
     column-count: 4; } }
 
-section.calenedar {
+.calendar {
   /* Colors
   --------------------------------------------------------------------------------------------------*/
   /* Buttons (styled <button> tags, normalized to work cross-browser)
@@ -402,19 +402,19 @@ section.calenedar {
   /* make the dot closer to the event title */
   /* message when no events */
   /* related product */ }
-  section.calenedar .fc-highlight {
+  .calendar .fc-highlight {
     /* when user is selecting cells */
     background: #bce8f1;
     opacity: .3; }
-  section.calenedar .fc-bgevent {
+  .calendar .fc-bgevent {
     /* default look for background events */
     background: #8fdf82;
     opacity: .3; }
-  section.calenedar .fc-nonbusiness {
+  .calendar .fc-nonbusiness {
     /* default look for non-business-hours areas */
     /* will inherit .fc-bgevent's styles */
     background: rgba(52, 40, 104, 0.05); }
-  section.calenedar .fc button {
+  .calendar .fc button {
     /* force height to include the border and padding */
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -428,28 +428,28 @@ section.calenedar {
     /* normalize */
     white-space: nowrap;
     cursor: pointer; }
-  section.calenedar .fc button::-moz-focus-inner {
+  .calendar .fc button::-moz-focus-inner {
     margin: 0;
     padding: 0; }
-  section.calenedar .fc-state-default {
+  .calendar .fc-state-default {
     /* non-theme */
     border: 1px solid; }
-  section.calenedar .fc-state-default.fc-corner-left {
+  .calendar .fc-state-default.fc-corner-left {
     /* non-theme */
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px; }
-  section.calenedar .fc-state-default.fc-corner-right {
+  .calendar .fc-state-default.fc-corner-right {
     /* non-theme */
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px; }
-  section.calenedar .fc button .fc-icon {
+  .calendar .fc button .fc-icon {
     /* non-theme */
     position: relative;
     top: -0.05em;
     /* seems to be a good adjustment across browsers */
     margin: 0 .2em;
     vertical-align: middle; }
-  section.calenedar .fc-state-default {
+  .calendar .fc-state-default {
     background-color: #f5f5f5;
     background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
@@ -462,13 +462,13 @@ section.calenedar {
     color: #333;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
-  section.calenedar .fc-state-hover,
-  section.calenedar .fc-state-down,
-  section.calenedar .fc-state-active,
-  section.calenedar .fc-state-disabled {
+  .calendar .fc-state-hover,
+  .calendar .fc-state-down,
+  .calendar .fc-state-active,
+  .calendar .fc-state-disabled {
     color: #333333;
     background-color: #e6e6e6; }
-  section.calenedar .fc-state-hover {
+  .calendar .fc-state-hover {
     color: #333333;
     text-decoration: none;
     background-position: 0 -15px;
@@ -476,68 +476,68 @@ section.calenedar {
     -moz-transition: background-position 0.1s linear;
     -o-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear; }
-  section.calenedar .fc-state-down,
-  section.calenedar .fc-state-active {
+  .calendar .fc-state-down,
+  .calendar .fc-state-active {
     background-color: #cccccc;
     background-image: none;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
-  section.calenedar .fc-state-disabled {
+  .calendar .fc-state-disabled {
     cursor: default;
     background-image: none;
     opacity: 0.65;
     box-shadow: none; }
-  section.calenedar .fc-button-group {
+  .calendar .fc-button-group {
     display: inline-block; }
-  section.calenedar .fc .fc-button-group > * {
+  .calendar .fc .fc-button-group > * {
     /* extra precedence b/c buttons have margin set to zero */
     float: left;
     margin: 0 0 0 -1px; }
-  section.calenedar .fc .fc-button-group > :first-child {
+  .calendar .fc .fc-button-group > :first-child {
     /* same */
     margin-left: 0; }
-  section.calenedar .fc-popover {
+  .calendar .fc-popover {
     position: absolute;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); }
-  section.calenedar .fc-popover .fc-header {
+  .calendar .fc-popover .fc-header {
     /* TODO: be more consistent with fc-head/fc-body */
     padding: 2px 4px; }
-  section.calenedar .fc-popover .fc-header .fc-title {
+  .calendar .fc-popover .fc-header .fc-title {
     margin: 0 2px; }
-  section.calenedar .fc-popover .fc-header .fc-close {
+  .calendar .fc-popover .fc-header .fc-close {
     cursor: pointer; }
-  section.calenedar .fc-ltr .fc-popover .fc-header .fc-title,
-  section.calenedar .fc-rtl .fc-popover .fc-header .fc-close {
+  .calendar .fc-ltr .fc-popover .fc-header .fc-title,
+  .calendar .fc-rtl .fc-popover .fc-header .fc-close {
     float: left; }
-  section.calenedar .fc-rtl .fc-popover .fc-header .fc-title,
-  section.calenedar .fc-ltr .fc-popover .fc-header .fc-close {
+  .calendar .fc-rtl .fc-popover .fc-header .fc-title,
+  .calendar .fc-ltr .fc-popover .fc-header .fc-close {
     float: right; }
-  section.calenedar .fc-divider {
+  .calendar .fc-divider {
     border-style: solid;
     border-width: 1px; }
-  section.calenedar hr.fc-divider {
+  .calendar hr.fc-divider {
     height: 0;
     margin: 0;
     padding: 0 0 2px;
     /* height is unreliable across browsers, so use padding */
     border-width: 1px 0; }
-  section.calenedar .fc-clear {
+  .calendar .fc-clear {
     clear: both; }
-  section.calenedar .fc-bg,
-  section.calenedar .fc-bgevent-skeleton,
-  section.calenedar .fc-highlight-skeleton,
-  section.calenedar .fc-helper-skeleton {
+  .calendar .fc-bg,
+  .calendar .fc-bgevent-skeleton,
+  .calendar .fc-highlight-skeleton,
+  .calendar .fc-helper-skeleton {
     /* these element should always cling to top-left/right corners */
     position: absolute;
     top: 0;
     left: 0;
     right: 0; }
-  section.calenedar .fc-bg {
+  .calendar .fc-bg {
     bottom: 0;
     /* strech bg to bottom edge */ }
-  section.calenedar .fc-bg table {
+  .calendar .fc-bg table {
     height: 100%;
     /* strech bg to bottom edge */ }
-  section.calenedar .fc table {
+  .calendar .fc table {
     width: 100%;
     box-sizing: border-box;
     /* fix scrollbar issue in firefox */
@@ -546,90 +546,90 @@ section.calenedar {
     border-spacing: 0;
     font-size: 1em;
     /* normalize cross-browser */ }
-  section.calenedar .fc th {
+  .calendar .fc th {
     text-align: center; }
-  section.calenedar .fc th,
-  section.calenedar .fc td {
+  .calendar .fc th,
+  .calendar .fc td {
     border-style: solid;
     border-width: 1px 1px 0 1px !important;
     padding: 0;
     border-color: #eee;
     vertical-align: top; }
-  section.calenedar .fc td.fc-today {
+  .calendar .fc td.fc-today {
     border-style: double;
     /* overcome neighboring borders */ }
-  section.calenedar a[data-goto] {
+  .calendar a[data-goto] {
     cursor: pointer; }
-  section.calenedar a[data-goto]:hover {
+  .calendar a[data-goto]:hover {
     text-decoration: underline; }
-  section.calenedar .fc .fc-row {
+  .calendar .fc .fc-row {
     /* extra precedence to overcome themes w/ .ui-widget-content forcing a 1px border */
     /* no visible border by default. but make available if need be (scrollbar width compensation) */
     border-style: solid;
     border-width: 0; }
-  section.calenedar .fc-row table {
+  .calendar .fc-row table {
     /* don't put left/right border on anything within a fake row.
       the outer tbody will worry about this */
     border-left: 0 hidden transparent;
     border-right: 0 hidden transparent;
     /* no bottom borders on rows */
     border-bottom: 0 hidden transparent; }
-  section.calenedar .fc-row:first-child table {
+  .calendar .fc-row:first-child table {
     border-top: 0 hidden transparent;
     /* no top border on first row */ }
-  section.calenedar .fc-row {
+  .calendar .fc-row {
     position: relative;
     background: #ffffff; }
-  section.calenedar .fc-row .fc-bg {
+  .calendar .fc-row .fc-bg {
     z-index: 1; }
-  section.calenedar .fc-row .fc-bgevent-skeleton,
-  section.calenedar .fc-row .fc-highlight-skeleton {
+  .calendar .fc-row .fc-bgevent-skeleton,
+  .calendar .fc-row .fc-highlight-skeleton {
     bottom: 0;
     /* stretch skeleton to bottom of row */ }
-  section.calenedar .fc-row .fc-bgevent-skeleton table,
-  section.calenedar .fc-row .fc-highlight-skeleton table {
+  .calendar .fc-row .fc-bgevent-skeleton table,
+  .calendar .fc-row .fc-highlight-skeleton table {
     height: 100%;
     /* stretch skeleton to bottom of row */ }
-  section.calenedar .fc-row .fc-highlight-skeleton td,
-  section.calenedar .fc-row .fc-bgevent-skeleton td {
+  .calendar .fc-row .fc-highlight-skeleton td,
+  .calendar .fc-row .fc-bgevent-skeleton td {
     border-color: transparent; }
-  section.calenedar .fc-row .fc-bgevent-skeleton {
+  .calendar .fc-row .fc-bgevent-skeleton {
     z-index: 2; }
-  section.calenedar .fc-row .fc-highlight-skeleton {
+  .calendar .fc-row .fc-highlight-skeleton {
     z-index: 3; }
-  section.calenedar .fc-row .fc-content-skeleton {
+  .calendar .fc-row .fc-content-skeleton {
     position: relative;
     z-index: 4;
     padding-bottom: 2px;
     /* matches the space above the events */ }
-  section.calenedar .fc-row .fc-helper-skeleton {
+  .calendar .fc-row .fc-helper-skeleton {
     z-index: 5; }
-  section.calenedar .fc .fc-row .fc-content-skeleton table,
-  section.calenedar .fc .fc-row .fc-content-skeleton td,
-  section.calenedar .fc .fc-row .fc-helper-skeleton td {
+  .calendar .fc .fc-row .fc-content-skeleton table,
+  .calendar .fc .fc-row .fc-content-skeleton td,
+  .calendar .fc .fc-row .fc-helper-skeleton td {
     /* see-through to the background below */
     /* extra precedence to prevent theme-provided backgrounds */
     background: none;
     /* in case <td>s are globally styled */
     border-color: transparent;
     padding: .5rem .5rem; }
-  section.calenedar .fc-row .fc-content-skeleton td,
-  section.calenedar .fc-row .fc-helper-skeleton td {
+  .calendar .fc-row .fc-content-skeleton td,
+  .calendar .fc-row .fc-helper-skeleton td {
     /* don't put a border between events and/or the day number */
     border-bottom: 0; }
-  section.calenedar .fc-row .fc-content-skeleton tbody td,
-  section.calenedar .fc-row .fc-helper-skeleton tbody td {
+  .calendar .fc-row .fc-content-skeleton tbody td,
+  .calendar .fc-row .fc-helper-skeleton tbody td {
     /* don't put a border between event cells */
     border-top: 0; }
-  section.calenedar .fc-scroller {
+  .calendar .fc-scroller {
     -webkit-overflow-scrolling: touch; }
-  section.calenedar .fc-scroller > .fc-day-grid,
-  section.calenedar .fc-scroller > .fc-time-grid {
+  .calendar .fc-scroller > .fc-day-grid,
+  .calendar .fc-scroller > .fc-time-grid {
     position: relative;
     /* re-scope all positions */
     width: 100%;
     /* hack to force re-sizing this inner element when scrollbars appear/disappear */ }
-  section.calenedar .fc-event {
+  .calendar .fc-event {
     position: relative;
     /* for resize handle and other inner positioning */
     display: block;
@@ -644,14 +644,14 @@ section.calenedar {
     -moz-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.05);
     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.05);
     /* default BORDER color */ }
-  section.calenedar .fc-event,
-  section.calenedar .fc-event-dot {
+  .calendar .fc-event,
+  .calendar .fc-event-dot {
     background-color: #ffffff;
     color: #5d5386;
     position: relative;
     /* default BACKGROUND color */ }
-  section.calenedar .fc-event:before,
-  section.calenedar .fc-event-dot:before {
+  .calendar .fc-event:before,
+  .calendar .fc-event-dot:before {
     content: "";
     position: absolute;
     left: 0;
@@ -663,46 +663,46 @@ section.calenedar {
     -webkit-border-radius: 3px 0px 0px 3px;
     -moz-border-radius: 3px 0px 0px 3px;
     border-radius: 3px 0px 0px 3px; }
-  section.calenedar .fc-event .fc-title {
+  .calendar .fc-event .fc-title {
     font-weight: 500; }
-  section.calenedar .fc-event i {
+  .calendar .fc-event i {
     font-size: 26px;
     margin-right: 8px;
     vertical-align: middle; }
-  section.calenedar .fc-event,
-  section.calenedar .fc-event:hover {
+  .calendar .fc-event,
+  .calendar .fc-event:hover {
     color: #fff;
     /* default TEXT color */
     text-decoration: none;
     /* if <a> has an href */ }
-  section.calenedar .fc-event[href],
-  section.calenedar .fc-event.fc-draggable {
+  .calendar .fc-event[href],
+  .calendar .fc-event.fc-draggable {
     cursor: pointer;
     /* give events with links and draggable events a hand mouse pointer */ }
-  section.calenedar .fc-not-allowed,
-  section.calenedar .fc-not-allowed .fc-event {
+  .calendar .fc-not-allowed,
+  .calendar .fc-not-allowed .fc-event {
     /* to override an event's custom cursor */
     cursor: not-allowed; }
-  section.calenedar .fc-event .fc-bg {
+  .calendar .fc-event .fc-bg {
     /* the generic .fc-bg already does position */
     z-index: 1;
     background: #fff;
     opacity: .25; }
-  section.calenedar .fc-event .fc-content {
+  .calendar .fc-event .fc-content {
     color: #2c304d;
     position: relative;
     z-index: 2;
     padding: 8px; }
-  section.calenedar .fc-event .fc-resizer {
+  .calendar .fc-event .fc-resizer {
     position: absolute;
     z-index: 4; }
-  section.calenedar .fc-event .fc-resizer {
+  .calendar .fc-event .fc-resizer {
     display: none; }
-  section.calenedar .fc-event.fc-allow-mouse-resize .fc-resizer,
-  section.calenedar .fc-event.fc-selected .fc-resizer {
+  .calendar .fc-event.fc-allow-mouse-resize .fc-resizer,
+  .calendar .fc-event.fc-selected .fc-resizer {
     /* only show when hovering or selected (with touch) */
     display: block; }
-  section.calenedar .fc-event.fc-selected .fc-resizer:before {
+  .calendar .fc-event.fc-selected .fc-resizer:before {
     /* 40x40 touch area */
     content: "";
     position: absolute;
@@ -714,13 +714,13 @@ section.calenedar {
     height: 40px;
     margin-left: -20px;
     margin-top: -20px; }
-  section.calenedar .fc-event.fc-selected {
+  .calendar .fc-event.fc-selected {
     z-index: 9999 !important;
     /* overcomes inline z-index */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
-  section.calenedar .fc-event.fc-selected.fc-dragging {
+  .calendar .fc-event.fc-selected.fc-dragging {
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3); }
-  section.calenedar .fc-h-event.fc-selected:before {
+  .calendar .fc-h-event.fc-selected:before {
     content: "";
     position: absolute;
     z-index: 3;
@@ -729,39 +729,39 @@ section.calenedar {
     bottom: -10px;
     left: 0;
     right: 0; }
-  section.calenedar .fc-ltr .fc-h-event.fc-not-start,
-  section.calenedar .fc-rtl .fc-h-event.fc-not-end {
+  .calendar .fc-ltr .fc-h-event.fc-not-start,
+  .calendar .fc-rtl .fc-h-event.fc-not-end {
     margin-left: 0;
     border-left-width: 0;
     padding-left: 1px;
     /* replace the border with padding */
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
-  section.calenedar .fc-ltr .fc-h-event.fc-not-end,
-  section.calenedar .fc-rtl .fc-h-event.fc-not-start {
+  .calendar .fc-ltr .fc-h-event.fc-not-end,
+  .calendar .fc-rtl .fc-h-event.fc-not-start {
     margin-right: 0;
     border-right-width: 0;
     padding-right: 1px;
     /* replace the border with padding */
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
-  section.calenedar .fc-ltr .fc-h-event .fc-start-resizer,
-  section.calenedar .fc-rtl .fc-h-event .fc-end-resizer {
+  .calendar .fc-ltr .fc-h-event .fc-start-resizer,
+  .calendar .fc-rtl .fc-h-event .fc-end-resizer {
     cursor: w-resize;
     left: -1px;
     /* overcome border */ }
-  section.calenedar .fc-ltr .fc-h-event .fc-end-resizer,
-  section.calenedar .fc-rtl .fc-h-event .fc-start-resizer {
+  .calendar .fc-ltr .fc-h-event .fc-end-resizer,
+  .calendar .fc-rtl .fc-h-event .fc-start-resizer {
     cursor: e-resize;
     right: -1px;
     /* overcome border */ }
-  section.calenedar .fc-h-event.fc-allow-mouse-resize .fc-resizer {
+  .calendar .fc-h-event.fc-allow-mouse-resize .fc-resizer {
     width: 7px;
     top: -1px;
     /* overcome top border */
     bottom: -1px;
     /* overcome bottom border */ }
-  section.calenedar .fc-h-event.fc-selected .fc-resizer {
+  .calendar .fc-h-event.fc-selected .fc-resizer {
     /* 8x8 little dot */
     border-radius: 4px;
     border-width: 1px;
@@ -773,22 +773,22 @@ section.calenedar {
     /* vertically center */
     top: 50%;
     margin-top: -4px; }
-  section.calenedar .fc-ltr .fc-h-event.fc-selected .fc-start-resizer,
-  section.calenedar .fc-rtl .fc-h-event.fc-selected .fc-end-resizer {
+  .calendar .fc-ltr .fc-h-event.fc-selected .fc-start-resizer,
+  .calendar .fc-rtl .fc-h-event.fc-selected .fc-end-resizer {
     margin-left: -4px;
     /* centers the 8x8 dot on the left edge */ }
-  section.calenedar .fc-ltr .fc-h-event.fc-selected .fc-end-resizer,
-  section.calenedar .fc-rtl .fc-h-event.fc-selected .fc-start-resizer {
+  .calendar .fc-ltr .fc-h-event.fc-selected .fc-end-resizer,
+  .calendar .fc-rtl .fc-h-event.fc-selected .fc-start-resizer {
     margin-right: -4px;
     /* centers the 8x8 dot on the right edge */ }
-  section.calenedar .fc-day-grid-event {
+  .calendar .fc-day-grid-event {
     margin: 1px 2px 0;
     /* spacing between events and edges */
     padding: 0; }
-  section.calenedar tr:first-child > td > .fc-day-grid-event {
+  .calendar tr:first-child > td > .fc-day-grid-event {
     margin-top: 2px;
     /* a little bit more space before the first event */ }
-  section.calenedar .fc-day-grid-event.fc-selected:after {
+  .calendar .fc-day-grid-event.fc-selected:after {
     content: "";
     position: absolute;
     z-index: 1;
@@ -801,42 +801,42 @@ section.calenedar {
     /* darkening effect */
     background: #000;
     opacity: .25; }
-  section.calenedar .fc-day-grid-event .fc-content {
+  .calendar .fc-day-grid-event .fc-content {
     /* force events to be one-line tall */
     white-space: nowrap;
     overflow: hidden; }
-  section.calenedar .fc-day-grid-event .fc-time {
+  .calendar .fc-day-grid-event .fc-time {
     font-weight: bold; }
-  section.calenedar .fc-ltr .fc-day-grid-event.fc-allow-mouse-resize .fc-start-resizer,
-  section.calenedar .fc-rtl .fc-day-grid-event.fc-allow-mouse-resize .fc-end-resizer {
+  .calendar .fc-ltr .fc-day-grid-event.fc-allow-mouse-resize .fc-start-resizer,
+  .calendar .fc-rtl .fc-day-grid-event.fc-allow-mouse-resize .fc-end-resizer {
     margin-left: -2px;
     /* to the day cell's edge */ }
-  section.calenedar .fc-ltr .fc-day-grid-event.fc-allow-mouse-resize .fc-end-resizer,
-  section.calenedar .fc-rtl .fc-day-grid-event.fc-allow-mouse-resize .fc-start-resizer {
+  .calendar .fc-ltr .fc-day-grid-event.fc-allow-mouse-resize .fc-end-resizer,
+  .calendar .fc-rtl .fc-day-grid-event.fc-allow-mouse-resize .fc-start-resizer {
     margin-right: -2px;
     /* to the day cell's edge */ }
-  section.calenedar a.fc-more {
+  .calendar a.fc-more {
     margin: 1px 3px;
     font-size: .85em;
     cursor: pointer;
     text-decoration: none; }
-  section.calenedar a.fc-more:hover {
+  .calendar a.fc-more:hover {
     text-decoration: underline; }
-  section.calenedar .fc-limited {
+  .calendar .fc-limited {
     /* rows and cells that are hidden because of a "more" link */
     display: none; }
-  section.calenedar .fc-day-grid .fc-row {
+  .calendar .fc-day-grid .fc-row {
     z-index: 1;
     /* make the "more" popover one higher than this */ }
-  section.calenedar .fc-more-popover {
+  .calendar .fc-more-popover {
     z-index: 2;
     width: 220px; }
-  section.calenedar .fc-more-popover .fc-event-container {
+  .calendar .fc-more-popover .fc-event-container {
     padding: 10px; }
-  section.calenedar .fc-now-indicator {
+  .calendar .fc-now-indicator {
     position: absolute;
     border: 0 solid red; }
-  section.calenedar .fc-unselectable {
+  .calendar .fc-unselectable {
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -844,31 +844,31 @@ section.calenedar {
     user-select: none;
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent; }
-  section.calenedar .fc-unthemed th,
-  section.calenedar .fc-unthemed td,
-  section.calenedar .fc-unthemed thead,
-  section.calenedar .fc-unthemed tbody,
-  section.calenedar .fc-unthemed .fc-divider,
-  section.calenedar .fc-unthemed .fc-row,
-  section.calenedar .fc-unthemed .fc-content,
-  section.calenedar .fc-unthemed .fc-popover,
-  section.calenedar .fc-unthemed .fc-list-view,
-  section.calenedar .fc-unthemed .fc-list-heading td {
+  .calendar .fc-unthemed th,
+  .calendar .fc-unthemed td,
+  .calendar .fc-unthemed thead,
+  .calendar .fc-unthemed tbody,
+  .calendar .fc-unthemed .fc-divider,
+  .calendar .fc-unthemed .fc-row,
+  .calendar .fc-unthemed .fc-content,
+  .calendar .fc-unthemed .fc-popover,
+  .calendar .fc-unthemed .fc-list-view,
+  .calendar .fc-unthemed .fc-list-heading td {
     border-color: #ddd; }
-  section.calenedar .fc-unthemed .fc-popover {
+  .calendar .fc-unthemed .fc-popover {
     background-color: #fff; }
-  section.calenedar .fc-unthemed .fc-divider,
-  section.calenedar .fc-unthemed .fc-popover .fc-header,
-  section.calenedar .fc-unthemed .fc-list-heading td {
+  .calendar .fc-unthemed .fc-divider,
+  .calendar .fc-unthemed .fc-popover .fc-header,
+  .calendar .fc-unthemed .fc-list-heading td {
     background: #eee; }
-  section.calenedar .fc-unthemed .fc-popover .fc-header .fc-close {
+  .calendar .fc-unthemed .fc-popover .fc-header .fc-close {
     color: #666; }
-  section.calenedar .fc-unthemed td.fc-today {
+  .calendar .fc-unthemed td.fc-today {
     background: #fcf8e3; }
-  section.calenedar .fc-unthemed .fc-disabled-day {
+  .calendar .fc-unthemed .fc-disabled-day {
     background: #d7d7d7;
     opacity: .3; }
-  section.calenedar .fc-icon {
+  .calendar .fc-icon {
     display: inline-block;
     height: 1em;
     line-height: 1em;
@@ -883,56 +883,56 @@ section.calenedar {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
-  section.calenedar .fc-icon:after {
+  .calendar .fc-icon:after {
     position: relative; }
-  section.calenedar .fc-icon-left-single-arrow:after {
+  .calendar .fc-icon-left-single-arrow:after {
     content: "\2039";
     font-weight: bold;
     font-size: 200%;
     top: -7%; }
-  section.calenedar .fc-icon-right-single-arrow:after {
+  .calendar .fc-icon-right-single-arrow:after {
     content: "\203A";
     font-weight: bold;
     font-size: 200%;
     top: -7%; }
-  section.calenedar .fc-icon-left-double-arrow:after {
+  .calendar .fc-icon-left-double-arrow:after {
     content: "\AB";
     font-size: 160%;
     top: -7%; }
-  section.calenedar .fc-icon-right-double-arrow:after {
+  .calendar .fc-icon-right-double-arrow:after {
     content: "\BB";
     font-size: 160%;
     top: -7%; }
-  section.calenedar .fc-icon-left-triangle:after {
+  .calendar .fc-icon-left-triangle:after {
     content: "\25C4";
     font-size: 125%;
     top: 3%; }
-  section.calenedar .fc-icon-right-triangle:after {
+  .calendar .fc-icon-right-triangle:after {
     content: "\25BA";
     font-size: 125%;
     top: 3%; }
-  section.calenedar .fc-icon-down-triangle:after {
+  .calendar .fc-icon-down-triangle:after {
     content: "\25BC";
     font-size: 125%;
     top: 2%; }
-  section.calenedar .fc-icon-x:after {
+  .calendar .fc-icon-x:after {
     content: "\D7";
     font-size: 200%;
     top: 6%; }
-  section.calenedar .fc-unthemed .fc-popover {
+  .calendar .fc-unthemed .fc-popover {
     border-width: 1px;
     border-style: solid; }
-  section.calenedar .fc-unthemed .fc-popover .fc-header .fc-close {
+  .calendar .fc-unthemed .fc-popover .fc-header .fc-close {
     font-size: .9em;
     margin-top: 2px; }
-  section.calenedar .fc-unthemed .fc-list-item:hover td {
+  .calendar .fc-unthemed .fc-list-item:hover td {
     background-color: #f5f5f5; }
-  section.calenedar .ui-widget .fc-disabled-day {
+  .calendar .ui-widget .fc-disabled-day {
     background-image: none; }
-  section.calenedar .fc-popover > .ui-widget-header + .ui-widget-content {
+  .calendar .fc-popover > .ui-widget-header + .ui-widget-content {
     border-top: 0;
     /* where they meet, let the header have the border */ }
-  section.calenedar .ui-widget .fc-event {
+  .calendar .ui-widget .fc-event {
     /* overpower jqui's styles on <a> tags. TODO: more DRY */
     color: #fff;
     /* default TEXT color */
@@ -940,55 +940,55 @@ section.calenedar {
     /* if <a> has an href */
     /* undo ui-widget-header bold */
     font-weight: normal; }
-  section.calenedar .ui-widget td.fc-axis {
+  .calendar .ui-widget td.fc-axis {
     font-weight: normal;
     /* overcome bold */ }
-  section.calenedar .fc-time-grid .fc-slats .ui-widget-content {
+  .calendar .fc-time-grid .fc-slats .ui-widget-content {
     background: none;
     /* see through to fc-bg */ }
-  section.calenedar .fc.fc-bootstrap3 a {
+  .calendar .fc.fc-bootstrap3 a {
     text-decoration: none; }
-  section.calenedar .fc.fc-bootstrap3 a[data-goto]:hover {
+  .calendar .fc.fc-bootstrap3 a[data-goto]:hover {
     text-decoration: underline; }
-  section.calenedar .fc-bootstrap3 hr.fc-divider {
+  .calendar .fc-bootstrap3 hr.fc-divider {
     border-color: inherit; }
-  section.calenedar .fc-bootstrap3 .fc-today.alert {
+  .calendar .fc-bootstrap3 .fc-today.alert {
     border-radius: 0; }
-  section.calenedar .fc-bootstrap3 .fc-popover .panel-body {
+  .calendar .fc-bootstrap3 .fc-popover .panel-body {
     padding: 0; }
-  section.calenedar .fc-bootstrap3 .fc-time-grid .fc-slats table {
+  .calendar .fc-bootstrap3 .fc-time-grid .fc-slats table {
     /* some themes have background color. see through to slats */
     background: none; }
-  section.calenedar .fc.fc-bootstrap4 a {
+  .calendar .fc.fc-bootstrap4 a {
     text-decoration: none; }
-  section.calenedar .fc.fc-bootstrap4 a[data-goto]:hover {
+  .calendar .fc.fc-bootstrap4 a[data-goto]:hover {
     text-decoration: underline; }
-  section.calenedar .fc-bootstrap4 hr.fc-divider {
+  .calendar .fc-bootstrap4 hr.fc-divider {
     border-color: inherit; }
-  section.calenedar .fc-bootstrap4 .fc-today.alert {
+  .calendar .fc-bootstrap4 .fc-today.alert {
     border-radius: 0; }
-  section.calenedar .fc-bootstrap4 a.fc-event:not([href]):not([tabindex]) {
+  .calendar .fc-bootstrap4 a.fc-event:not([href]):not([tabindex]) {
     color: #5d5386; }
-  section.calenedar .fc-bootstrap4 .fc-popover.card {
+  .calendar .fc-bootstrap4 .fc-popover.card {
     position: absolute; }
-  section.calenedar .fc-bootstrap4 .fc-popover .card-body {
+  .calendar .fc-bootstrap4 .fc-popover .card-body {
     padding: 0; }
-  section.calenedar .fc-bootstrap4 .fc-time-grid .fc-slats table {
+  .calendar .fc-bootstrap4 .fc-time-grid .fc-slats table {
     /* some themes have background color. see through to slats */
     background: none; }
-  section.calenedar .fc-toolbar {
+  .calendar .fc-toolbar {
     text-align: center; }
-  section.calenedar .fc-toolbar.fc-header-toolbar {
+  .calendar .fc-toolbar.fc-header-toolbar {
     margin-bottom: 1em; }
-  section.calenedar .fc-toolbar.fc-footer-toolbar {
+  .calendar .fc-toolbar.fc-footer-toolbar {
     margin-top: 1em; }
-  section.calenedar .fc-toolbar .fc-left {
+  .calendar .fc-toolbar .fc-left {
     float: left; }
-  section.calenedar .fc-toolbar .fc-right {
+  .calendar .fc-toolbar .fc-right {
     float: right; }
-  section.calenedar .fc-toolbar .fc-center {
+  .calendar .fc-toolbar .fc-center {
     display: inline-block; }
-  section.calenedar .fc button {
+  .calendar .fc button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -998,187 +998,187 @@ section.calenedar {
     font-size: 1rem;
     white-space: nowrap;
     cursor: pointer; }
-  section.calenedar .fc .fc-toolbar > * > * {
+  .calendar .fc .fc-toolbar > * > * {
     /* extra precedence to override button border margins */
     float: left;
     margin-left: .75em; }
-  section.calenedar .fc .fc-toolbar > * > :first-child {
+  .calendar .fc .fc-toolbar > * > :first-child {
     /* extra precedence to override button border margins */
     margin-left: 0; }
-  section.calenedar .fc-toolbar h2 {
+  .calendar .fc-toolbar h2 {
     margin: 0;
     font-size: 15px;
     font-weight: 700; }
-  section.calenedar .fc-toolbar button {
+  .calendar .fc-toolbar button {
     position: relative; }
-  section.calenedar .fc-toolbar .fc-state-hover,
-  section.calenedar .fc-toolbar .ui-state-hover {
+  .calendar .fc-toolbar .fc-state-hover,
+  .calendar .fc-toolbar .ui-state-hover {
     z-index: 2; }
-  section.calenedar .fc-toolbar .fc-state-down {
+  .calendar .fc-toolbar .fc-state-down {
     z-index: 3; }
-  section.calenedar .fc-toolbar .fc-state-active,
-  section.calenedar .fc-toolbar .ui-state-active {
+  .calendar .fc-toolbar .fc-state-active,
+  .calendar .fc-toolbar .ui-state-active {
     z-index: 4; }
-  section.calenedar .fc-toolbar button:focus {
+  .calendar .fc-toolbar button:focus {
     z-index: 5; }
-  section.calenedar .fc-view-container *,
-  section.calenedar .fc-view-container *:before,
-  section.calenedar .fc-view-container *:after {
+  .calendar .fc-view-container *,
+  .calendar .fc-view-container *:before,
+  .calendar .fc-view-container *:after {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box; }
-  section.calenedar .fc-view,
-  section.calenedar .fc-view > table {
+  .calendar .fc-view,
+  .calendar .fc-view > table {
     /* so dragged elements can be above the view's main element */
     position: relative;
     z-index: 1; }
-  section.calenedar .fc-basicWeek-view .fc-content-skeleton,
-  section.calenedar .fc-basicDay-view .fc-content-skeleton {
+  .calendar .fc-basicWeek-view .fc-content-skeleton,
+  .calendar .fc-basicDay-view .fc-content-skeleton {
     /* there may be week numbers in these views, so no padding-top */
     padding-bottom: 1em;
     /* ensure a space at bottom of cell for user selecting/clicking */ }
-  section.calenedar .fc-basic-view .fc-body .fc-row {
+  .calendar .fc-basic-view .fc-body .fc-row {
     min-height: 4em;
     /* ensure that all rows are at least this tall */ }
-  section.calenedar .fc-row.fc-rigid {
+  .calendar .fc-row.fc-rigid {
     overflow: hidden; }
-  section.calenedar .fc-row.fc-rigid .fc-content-skeleton {
+  .calendar .fc-row.fc-rigid .fc-content-skeleton {
     position: absolute;
     top: 0;
     left: 0;
     right: 0; }
-  section.calenedar .fc-day-top.fc-other-month {
+  .calendar .fc-day-top.fc-other-month {
     opacity: 0.3; }
-  section.calenedar .fc-basic-view .fc-week-number,
-  section.calenedar .fc-basic-view .fc-day-number {
+  .calendar .fc-basic-view .fc-week-number,
+  .calendar .fc-basic-view .fc-day-number {
     padding: 2px;
     color: rgba(52, 40, 104, 0.8);
     font-size: 15px;
     font-weight: 400; }
-  section.calenedar .fc-basic-view th.fc-week-number,
-  section.calenedar .fc-basic-view th.fc-day-number {
+  .calendar .fc-basic-view th.fc-week-number,
+  .calendar .fc-basic-view th.fc-day-number {
     padding: 0 2px;
     /* column headers can't have as much v space */ }
-  section.calenedar .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+  .calendar .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
     float: right; }
-  section.calenedar .fc-rtl .fc-basic-view .fc-day-top .fc-day-number {
+  .calendar .fc-rtl .fc-basic-view .fc-day-top .fc-day-number {
     float: left; }
-  section.calenedar .fc-ltr .fc-basic-view .fc-day-top .fc-week-number {
+  .calendar .fc-ltr .fc-basic-view .fc-day-top .fc-week-number {
     float: left;
     border-radius: 0 0 3px 0; }
-  section.calenedar .fc-rtl .fc-basic-view .fc-day-top .fc-week-number {
+  .calendar .fc-rtl .fc-basic-view .fc-day-top .fc-week-number {
     float: right;
     border-radius: 0 0 0 3px; }
-  section.calenedar .fc-basic-view .fc-day-top .fc-week-number {
+  .calendar .fc-basic-view .fc-day-top .fc-week-number {
     min-width: 1.5em;
     text-align: center;
     background-color: #f2f2f2;
     color: #808080; }
-  section.calenedar .fc-basic-view td.fc-week-number {
+  .calendar .fc-basic-view td.fc-week-number {
     text-align: center; }
-  section.calenedar .fc-basic-view td.fc-week-number > * {
+  .calendar .fc-basic-view td.fc-week-number > * {
     /* work around the way we do column resizing and ensure a minimum width */
     display: inline-block;
     min-width: 1.25em; }
-  section.calenedar .fc-agenda-view .fc-day-grid {
+  .calendar .fc-agenda-view .fc-day-grid {
     position: relative;
     z-index: 2;
     /* so the "more.." popover will be over the time grid */ }
-  section.calenedar .fc-agenda-view .fc-day-grid .fc-row {
+  .calendar .fc-agenda-view .fc-day-grid .fc-row {
     min-height: 3em;
     /* all-day section will never get shorter than this */ }
-  section.calenedar .fc-agenda-view .fc-day-grid .fc-row .fc-content-skeleton {
+  .calendar .fc-agenda-view .fc-day-grid .fc-row .fc-content-skeleton {
     padding-bottom: 1em;
     /* give space underneath events for clicking/selecting days */ }
-  section.calenedar .fc .fc-axis {
+  .calendar .fc .fc-axis {
     /* .fc to overcome default cell styles */
     vertical-align: middle;
     padding: 0 4px;
     white-space: nowrap; }
-  section.calenedar .fc-ltr .fc-axis {
+  .calendar .fc-ltr .fc-axis {
     text-align: right; }
-  section.calenedar .fc-rtl .fc-axis {
+  .calendar .fc-rtl .fc-axis {
     text-align: left; }
-  section.calenedar .fc-time-grid-container,
-  section.calenedar .fc-time-grid {
+  .calendar .fc-time-grid-container,
+  .calendar .fc-time-grid {
     /* so slats/bg/content/etc positions get scoped within here */
     position: relative;
     z-index: 1; }
-  section.calenedar .fc-time-grid {
+  .calendar .fc-time-grid {
     min-height: 100%;
     /* so if height setting is 'auto', .fc-bg stretches to fill height */ }
-  section.calenedar .fc-time-grid table {
+  .calendar .fc-time-grid table {
     /* don't put outer borders on slats/bg/content/etc */
     border: 0 hidden transparent; }
-  section.calenedar .fc-time-grid > .fc-bg {
+  .calendar .fc-time-grid > .fc-bg {
     z-index: 1;
     background: #fff; }
-  section.calenedar .fc-time-grid .fc-slats,
-  section.calenedar .fc-time-grid > hr {
+  .calendar .fc-time-grid .fc-slats,
+  .calendar .fc-time-grid > hr {
     /* the <hr> AgendaView injects when grid is shorter than scroller */
     position: relative;
     z-index: 2; }
-  section.calenedar .fc-time-grid .fc-content-col {
+  .calendar .fc-time-grid .fc-content-col {
     position: relative;
     /* because now-indicator lives directly inside */ }
-  section.calenedar .fc-time-grid .fc-content-skeleton {
+  .calendar .fc-time-grid .fc-content-skeleton {
     position: absolute;
     z-index: 3;
     top: 0;
     left: 0;
     right: 0; }
-  section.calenedar .fc-time-grid .fc-business-container {
+  .calendar .fc-time-grid .fc-business-container {
     position: relative;
     z-index: 1; }
-  section.calenedar .fc-time-grid .fc-bgevent-container {
+  .calendar .fc-time-grid .fc-bgevent-container {
     position: relative;
     z-index: 2; }
-  section.calenedar .fc-time-grid .fc-highlight-container {
+  .calendar .fc-time-grid .fc-highlight-container {
     position: relative;
     z-index: 3; }
-  section.calenedar .fc-time-grid .fc-event-container {
+  .calendar .fc-time-grid .fc-event-container {
     position: relative;
     z-index: 4; }
-  section.calenedar .fc-time-grid .fc-now-indicator-line {
+  .calendar .fc-time-grid .fc-now-indicator-line {
     z-index: 5; }
-  section.calenedar .fc-time-grid .fc-helper-container {
+  .calendar .fc-time-grid .fc-helper-container {
     /* also is fc-event-container */
     position: relative;
     z-index: 6; }
-  section.calenedar .fc-time-grid .fc-slats td {
+  .calendar .fc-time-grid .fc-slats td {
     height: 1.5em;
     border-bottom: 0;
     padding: 10px;
     /* each cell is responsible for its top border */ }
-  section.calenedar .fc-agendaDay-view .fc-time-grid .fc-slats td {
+  .calendar .fc-agendaDay-view .fc-time-grid .fc-slats td {
     background: #ffffff; }
-  section.calenedar .fc-time-grid .fc-slats .fc-minor td {
+  .calendar .fc-time-grid .fc-slats .fc-minor td {
     border-top-style: dotted; }
-  section.calenedar .fc-time-grid .fc-highlight-container {
+  .calendar .fc-time-grid .fc-highlight-container {
     /* a div within a cell within the fc-highlight-skeleton */
     position: relative;
     /* scopes the left/right of the fc-highlight to be in the column */ }
-  section.calenedar .fc-time-grid .fc-highlight {
+  .calendar .fc-time-grid .fc-highlight {
     position: absolute;
     left: 0;
     right: 0;
     /* top and bottom will be in by JS */ }
-  section.calenedar .fc-ltr .fc-time-grid .fc-event-container {
+  .calendar .fc-ltr .fc-time-grid .fc-event-container {
     /* space on the sides of events for LTR (default) */
     margin: 0 2.5% 0 2px; }
-  section.calenedar .fc-rtl .fc-time-grid .fc-event-container {
+  .calendar .fc-rtl .fc-time-grid .fc-event-container {
     /* space on the sides of events for RTL */
     margin: 0 2px 0 2.5%; }
-  section.calenedar .fc-time-grid .fc-event,
-  section.calenedar .fc-time-grid .fc-bgevent {
+  .calendar .fc-time-grid .fc-event,
+  .calendar .fc-time-grid .fc-bgevent {
     position: absolute;
     z-index: 1;
     /* scope inner z-index's */ }
-  section.calenedar .fc-time-grid .fc-bgevent {
+  .calendar .fc-time-grid .fc-bgevent {
     /* background events always span full width */
     left: 0;
     right: 0; }
-  section.calenedar .fc-v-event.fc-not-start {
+  .calendar .fc-v-event.fc-not-start {
     /* events that are continuing from another day */
     /* replace space made by the top border with padding */
     border-top-width: 0;
@@ -1186,55 +1186,55 @@ section.calenedar {
     /* remove top rounded corners */
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
-  section.calenedar .fc-v-event.fc-not-end {
+  .calendar .fc-v-event.fc-not-end {
     /* replace space made by the top border with padding */
     border-bottom-width: 0;
     padding-bottom: 1px;
     /* remove bottom rounded corners */
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; }
-  section.calenedar .fc-time-grid-event {
+  .calendar .fc-time-grid-event {
     overflow: hidden;
     /* don't let the bg flow over rounded corners */ }
-  section.calenedar .fc-time-grid-event.fc-selected {
+  .calendar .fc-time-grid-event.fc-selected {
     /* need to allow touch resizers to extend outside event's bounding box */
     /* common fc-selected styles hide the fc-bg, so don't need this anyway */
     overflow: visible; }
-  section.calenedar .fc-time-grid-event.fc-selected .fc-bg {
+  .calendar .fc-time-grid-event.fc-selected .fc-bg {
     display: none;
     /* hide semi-white background, to appear darker */ }
-  section.calenedar .fc-time-grid-event .fc-content {
+  .calendar .fc-time-grid-event .fc-content {
     overflow: hidden;
     /* for when .fc-selected */ }
-  section.calenedar .fc-time-grid-event .fc-time,
-  section.calenedar .fc-time-grid-event .fc-title {
+  .calendar .fc-time-grid-event .fc-time,
+  .calendar .fc-time-grid-event .fc-title {
     padding: 0 1px; }
-  section.calenedar .fc-time-grid-event .fc-time {
+  .calendar .fc-time-grid-event .fc-time {
     font-size: .85em;
     white-space: nowrap; }
-  section.calenedar .fc-time-grid-event.fc-short .fc-content {
+  .calendar .fc-time-grid-event.fc-short .fc-content {
     /* don't wrap to second line (now that contents will be inline) */
     white-space: nowrap; }
-  section.calenedar .fc-time-grid-event.fc-short .fc-time,
-  section.calenedar .fc-time-grid-event.fc-short .fc-title {
+  .calendar .fc-time-grid-event.fc-short .fc-time,
+  .calendar .fc-time-grid-event.fc-short .fc-title {
     /* put the time and title on the same line */
     display: inline-block;
     vertical-align: top; }
-  section.calenedar .fc-time-grid-event.fc-short .fc-time span {
+  .calendar .fc-time-grid-event.fc-short .fc-time span {
     display: none;
     /* don't display the full time text... */ }
-  section.calenedar .fc-time-grid-event.fc-short .fc-time:before {
+  .calendar .fc-time-grid-event.fc-short .fc-time:before {
     content: attr(data-start);
     /* ...instead, display only the start time */ }
-  section.calenedar .fc-time-grid-event.fc-short .fc-time:after {
+  .calendar .fc-time-grid-event.fc-short .fc-time:after {
     content: "\A0-\A0";
     /* seperate with a dash, wrapped in nbsp's */ }
-  section.calenedar .fc-time-grid-event.fc-short .fc-title {
+  .calendar .fc-time-grid-event.fc-short .fc-title {
     font-size: .85em;
     /* make the title text the same size as the time */
     padding: 0;
     /* undo padding from above */ }
-  section.calenedar .fc-time-grid-event.fc-allow-mouse-resize .fc-resizer {
+  .calendar .fc-time-grid-event.fc-allow-mouse-resize .fc-resizer {
     left: 0;
     right: 0;
     bottom: 0;
@@ -1245,9 +1245,9 @@ section.calenedar {
     font-family: monospace;
     text-align: center;
     cursor: s-resize; }
-  section.calenedar .fc-time-grid-event.fc-allow-mouse-resize .fc-resizer:after {
+  .calendar .fc-time-grid-event.fc-allow-mouse-resize .fc-resizer:after {
     content: "="; }
-  section.calenedar .fc-time-grid-event.fc-selected .fc-resizer {
+  .calendar .fc-time-grid-event.fc-selected .fc-resizer {
     /* 10x10 dot */
     border-radius: 5px;
     border-width: 1px;
@@ -1261,108 +1261,108 @@ section.calenedar {
     margin-left: -5px;
     /* center on the bottom edge */
     bottom: -5px; }
-  section.calenedar .fc-time-grid .fc-now-indicator-line {
+  .calendar .fc-time-grid .fc-now-indicator-line {
     border-top-width: 1px;
     left: 0;
     right: 0; }
-  section.calenedar .fc-time-grid .fc-now-indicator-arrow {
+  .calendar .fc-time-grid .fc-now-indicator-arrow {
     margin-top: -5px;
     /* vertically center on top coordinate */ }
-  section.calenedar .fc-ltr .fc-time-grid .fc-now-indicator-arrow {
+  .calendar .fc-ltr .fc-time-grid .fc-now-indicator-arrow {
     left: 0;
     /* triangle pointing right... */
     border-width: 5px 0 5px 6px;
     border-top-color: transparent;
     border-bottom-color: transparent; }
-  section.calenedar .fc-rtl .fc-time-grid .fc-now-indicator-arrow {
+  .calendar .fc-rtl .fc-time-grid .fc-now-indicator-arrow {
     right: 0;
     /* triangle pointing left... */
     border-width: 5px 6px 5px 0;
     border-top-color: transparent;
     border-bottom-color: transparent; }
-  section.calenedar .fc-event-dot {
+  .calendar .fc-event-dot {
     display: inline-block;
     width: 10px;
     height: 10px;
     border-radius: 5px; }
-  section.calenedar .fc-rtl .fc-list-view {
+  .calendar .fc-rtl .fc-list-view {
     direction: rtl;
     /* unlike core views, leverage browser RTL */ }
-  section.calenedar .fc-list-view {
+  .calendar .fc-list-view {
     border-width: 1px;
     border-style: solid; }
-  section.calenedar .fc .fc-list-table {
+  .calendar .fc .fc-list-table {
     table-layout: auto;
     /* for shrinkwrapping cell content */ }
-  section.calenedar .fc-list-table td {
+  .calendar .fc-list-table td {
     border-width: 1px 0 0;
     padding: 8px 14px; }
-  section.calenedar .fc-list-table tr:first-child td {
+  .calendar .fc-list-table tr:first-child td {
     border-top-width: 0; }
-  section.calenedar .fc-list-heading {
+  .calendar .fc-list-heading {
     border-bottom-width: 1px; }
-  section.calenedar .fc-list-heading td {
+  .calendar .fc-list-heading td {
     font-weight: bold; }
-  section.calenedar .fc-ltr .fc-list-heading-main {
+  .calendar .fc-ltr .fc-list-heading-main {
     float: left; }
-  section.calenedar .fc-ltr .fc-list-heading-alt {
+  .calendar .fc-ltr .fc-list-heading-alt {
     float: right; }
-  section.calenedar .fc-rtl .fc-list-heading-main {
+  .calendar .fc-rtl .fc-list-heading-main {
     float: right; }
-  section.calenedar .fc-rtl .fc-list-heading-alt {
+  .calendar .fc-rtl .fc-list-heading-alt {
     float: left; }
-  section.calenedar .fc-list-item.fc-has-url {
+  .calendar .fc-list-item.fc-has-url {
     cursor: pointer;
     /* whole row will be clickable */ }
-  section.calenedar .fc-list-item-marker,
-  section.calenedar .fc-list-item-time {
+  .calendar .fc-list-item-marker,
+  .calendar .fc-list-item-time {
     white-space: nowrap;
     width: 1px; }
-  section.calenedar .fc-ltr .fc-list-item-marker {
+  .calendar .fc-ltr .fc-list-item-marker {
     padding-right: 0; }
-  section.calenedar .fc-rtl .fc-list-item-marker {
+  .calendar .fc-rtl .fc-list-item-marker {
     padding-left: 0; }
-  section.calenedar .fc-list-item-title a {
+  .calendar .fc-list-item-title a {
     /* every event title cell has an <a> tag */
     text-decoration: none;
     color: inherit; }
-  section.calenedar .fc-list-item-title a[href]:hover {
+  .calendar .fc-list-item-title a[href]:hover {
     /* hover effect only on titles with hrefs */
     text-decoration: underline; }
-  section.calenedar .fc-list-empty-wrap2 {
+  .calendar .fc-list-empty-wrap2 {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0; }
-  section.calenedar .fc-list-empty-wrap1 {
+  .calendar .fc-list-empty-wrap1 {
     width: 100%;
     height: 100%;
     display: table; }
-  section.calenedar .fc-list-empty {
+  .calendar .fc-list-empty {
     display: table-cell;
     vertical-align: middle;
     text-align: center; }
-  section.calenedar .fc-unthemed .fc-list-empty {
+  .calendar .fc-unthemed .fc-list-empty {
     /* theme will provide own background */
     background-color: #eee; }
-  section.calenedar .fc th.fc-day-header {
+  .calendar .fc th.fc-day-header {
     padding: 11px 7px;
     font-size: 16px;
     font-weight: 400; }
-  section.calenedar .fc-day.fc-today {
+  .calendar .fc-day.fc-today {
     background: rgba(52, 40, 104, 0.03); }
-  section.calenedar .fc-day.alert-info {
+  .calendar .fc-day.alert-info {
     background: rgba(52, 40, 104, 0.03); }
-  section.calenedar .datepicker {
+  .calendar .datepicker {
     z-index: 123456; }
-  section.calenedar body {
+  .calendar body {
     font-family: 'Nunito', sans-serif;
     background: #F3F5F9; }
-  section.calenedar .card {
+  .calendar .card {
     border: 0;
     background: transparent; }
-  section.calenedar h2 {
+  .calendar h2 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 22px;
@@ -1371,7 +1371,7 @@ section.calenedar {
     font-family: 'Montserrat', sans-serif;
     color: #002147;
     margin-bottom: 20px; }
-  section.calenedar .btn {
+  .calendar .btn {
     font-size: 15px !important;
     text-transform: uppercase;
     font-weight: 700;
@@ -1380,20 +1380,20 @@ section.calenedar {
     box-shadow: none !important;
     border: 0;
     padding: 10px 20px !important; }
-  section.calenedar .btn:focus {
+  .calendar .btn:focus {
     box-shadow: none; }
-  section.calenedar .btn.btn-primary {
+  .calendar .btn.btn-primary {
     background: #002147;
     color: #ffffff; }
-  section.calenedar .form-group label {
+  .calendar .form-group label {
     font-weight: 600;
     letter-spacing: 0.010em;
     font-size: 18px;
     margin-bottom: 5px; }
-  section.calenedar .modal-body {
+  .calendar .modal-body {
     background: #F3F5F9;
     border-radius: 10px; }
-  section.calenedar .modal-body h4 {
+  .calendar .modal-body h4 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 18px;
@@ -1401,39 +1401,39 @@ section.calenedar {
     font-family: 'Montserrat', sans-serif;
     color: #002147;
     margin-bottom: 20px; }
-  section.calenedar .modal-body .form-control {
+  .calendar .modal-body .form-control {
     box-shadow: none;
     height: 50px; }
-  section.calenedar .related-product {
+  .calendar .related-product {
     padding: 80px 0; }
-  section.calenedar .related-product .container {
+  .calendar .related-product .container {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto; }
-  section.calenedar .related-product ul {
+  .calendar .related-product ul {
     padding: 0;
     margin: 0; }
-  section.calenedar .related-product ul li {
+  .calendar .related-product ul li {
     margin-bottom: 30px;
     list-style-type: none; }
-  section.calenedar .related-product ul li h3 {
+  .calendar .related-product ul li h3 {
     font-weight: 700;
     font-size: 24px;
     padding: 20px 0; }
-  section.calenedar .related-product ul li a {
+  .calendar .related-product ul li a {
     font-weight: 600;
     color: #3b484a;
     text-align: center; }
-  section.calenedar .related-product ul li a img {
+  .calendar .related-product ul li a img {
     max-width: 100%;
     display: block; }
-  section.calenedar .related-box {
+  .calendar .related-box {
     max-width: 400px;
     margin: 0 auto; }
-  section.calenedar .download-btn {
+  .calendar .download-btn {
     padding: 15px;
     display: inline-flex;
     align-items: center; }
-  section.calenedar .download-btn .fa {
+  .calendar .download-btn .fa {
     font-size: 40px;
     margin-right: 10px; }

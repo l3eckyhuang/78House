@@ -59,21 +59,34 @@
 // status: "confirmed"
 // summary: "Reserved"
 // updated: "2020-05-04T18:36:33.435Z"
+					let _start = moment(ele.start.date);
+					let _end = moment(ele.end.date);
+					let _dayDiff = _end.diff(_start, 'days');
 
-					events.push({
-						title: 'Reserved',
-						start: ele.start.date,
-						end: ele.end.date,
-						icon: ''
-					});
+					if (_dayDiff > 1) {
+						for (let _diff = 0; _diff < _dayDiff; _diff++) {
+							let _eventStart = _start.clone().add(_diff, 'day').format('YYYY-MM-DD');
+							let _eventEnd = _start.clone().add(1, 'day').format('YYYY-MM-DD');
+							
+							events.push({
+								title: '',
+								start: _eventStart,
+								end: _eventEnd
+							});
+						}
+					} else {
+						events.push({
+							title: '',
+							start: _start.format('YYYY-MM-DD'),
+							end: _end.format('YYYY-MM-DD')
+						});
+					}
 				}
 				$('#calendar').fullCalendar({
 					themeSystem: 'bootstrap4',
 					// emphasizes business hours
 					businessHours: false,
 					defaultView: 'month',
-					// event dragging & resizing
-					editable: true,
 					// header
 					header: {
 						left: 'title',
@@ -81,21 +94,10 @@
 						right: ''
 					},
 					events: events,
-					eventRender: function(event, element) {
-						if(event.icon){
-							element.find(".fc-title").prepend("<i class='fa fa-"+event.icon+"'></i>");
-						}
-					},
-					dayClick: function() {
-						jQuery('#modal-view-event-add').modal();
-					},
-					eventClick: function(event, jsEvent, view) {
-							jQuery('.event-icon').html("<i class='fa fa-"+event.icon+"'></i>");
-							jQuery('.event-title').html(event.title);
-							jQuery('.event-body').html(event.description);
-							jQuery('.eventUrl').attr('href',event.url);
-							jQuery('#modal-view-event').modal();
-					},
+					eventRender: function(event, e) {
+						e.find(".fc-content").remove();
+						e.append("<i class='icon-cancel'></i>");
+					}
 				});
 			}
 		});

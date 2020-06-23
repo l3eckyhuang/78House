@@ -227,6 +227,12 @@ h1 {
 .card:hover {
   box-shadow: 0 2px 24px 0 rgba(20, 32, 32, 0.08); }
 
+.contact h5 {
+  color: #777;
+  font-size: 13px;
+  letter-spacing: 6px;
+  padding-bottom: 1rem; }
+
 @media (min-width: 576px) {
   .card-columns {
     column-count: 2; } }

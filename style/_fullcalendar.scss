@@ -329,28 +329,25 @@
     letter-spacing: 0.02em;
     border-radius: 3px;
     font-weight: 500;
-    -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.05);
     /* default BORDER color */ }
 
   .fc-event,
   .fc-event-dot {
-    background-color: #ffffff;
-    color: #5d5386;
+    color: #A5A58D;
     position: relative;
     /* default BACKGROUND color */ }
   .fc-event:before,
   .fc-event-dot:before{
       content: "";
       position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 50px;
-      height: 100%;
-      -webkit-border-radius: 3px 0px 0px 3px;
-      -moz-border-radius: 3px 0px 0px 3px;
-      border-radius: 3px 0px 0px 3px;
+      left: -3px;
+      bottom: 2px;
+      width: 10px;
+      height: 10px;
+      background-color: #E6C3C3;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
   }
   .fc-event .fc-title {
       font-weight: 500;
@@ -793,7 +790,7 @@
     border-radius: 0; }
 
   .fc-bootstrap4 a.fc-event:not([href]):not([tabindex]) {
-    color: #5d5386; }
+    color: #A5A58D; }
 
   .fc-bootstrap4 .fc-popover.card {
     position: absolute; }
@@ -855,8 +852,8 @@
   /* title text */
   .fc-toolbar h2 {
     margin: 0;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 32px;
+    font-weight: 300;
   }
 
   /* button layering (for border precedence) */
@@ -923,10 +920,9 @@
 
   .fc-basic-view .fc-week-number,
   .fc-basic-view .fc-day-number {
-    padding: 2px;
-    color: rgba(52,40,104,.8);
-    font-size: 15px;
-    font-weight: 400;
+    color: #c36522;
+    font-size: 23px;
+    font-weight: 300;
   }
 
   .fc-basic-view th.fc-week-number,
@@ -935,10 +931,12 @@
     /* column headers can't have as much v space */ }
 
   .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
-    float: right; }
+    // float: right; 
+  }
 
   .fc-rtl .fc-basic-view .fc-day-top .fc-day-number {
-    float: left; }
+    // float: left;
+   }
 
   .fc-ltr .fc-basic-view .fc-day-top .fc-week-number {
     float: left;
@@ -1383,7 +1381,7 @@
     box-shadow: none;
   }
   .btn.btn-primary{
-    background: #002147;
+    background: #685044;
     color: #ffffff;
   }
   .form-group label{

@@ -639,27 +639,24 @@ h1 {
     letter-spacing: 0.02em;
     border-radius: 3px;
     font-weight: 500;
-    -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.05);
     /* default BORDER color */ }
   .calendar .fc-event,
   .calendar .fc-event-dot {
-    background-color: #ffffff;
-    color: #5d5386;
+    color: #A5A58D;
     position: relative;
     /* default BACKGROUND color */ }
   .calendar .fc-event:before,
   .calendar .fc-event-dot:before {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 50px;
-    height: 100%;
-    -webkit-border-radius: 3px 0px 0px 3px;
-    -moz-border-radius: 3px 0px 0px 3px;
-    border-radius: 3px 0px 0px 3px; }
+    left: -3px;
+    bottom: 2px;
+    width: 10px;
+    height: 10px;
+    background-color: #E6C3C3;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; }
   .calendar .fc-event .fc-title {
     font-weight: 500; }
   .calendar .fc-event i {
@@ -965,7 +962,7 @@ h1 {
   .calendar .fc-bootstrap4 .fc-today.alert {
     border-radius: 0; }
   .calendar .fc-bootstrap4 a.fc-event:not([href]):not([tabindex]) {
-    color: #5d5386; }
+    color: #A5A58D; }
   .calendar .fc-bootstrap4 .fc-popover.card {
     position: absolute; }
   .calendar .fc-bootstrap4 .fc-popover .card-body {
@@ -1004,8 +1001,8 @@ h1 {
     margin-left: 0; }
   .calendar .fc-toolbar h2 {
     margin: 0;
-    font-size: 15px;
-    font-weight: 700; }
+    font-size: 32px;
+    font-weight: 300; }
   .calendar .fc-toolbar button {
     position: relative; }
   .calendar .fc-toolbar .fc-state-hover,
@@ -1048,18 +1045,13 @@ h1 {
     opacity: 0.3; }
   .calendar .fc-basic-view .fc-week-number,
   .calendar .fc-basic-view .fc-day-number {
-    padding: 2px;
-    color: rgba(52, 40, 104, 0.8);
-    font-size: 15px;
-    font-weight: 400; }
+    color: #c36522;
+    font-size: 23px;
+    font-weight: 300; }
   .calendar .fc-basic-view th.fc-week-number,
   .calendar .fc-basic-view th.fc-day-number {
     padding: 0 2px;
     /* column headers can't have as much v space */ }
-  .calendar .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
-    float: right; }
-  .calendar .fc-rtl .fc-basic-view .fc-day-top .fc-day-number {
-    float: left; }
   .calendar .fc-ltr .fc-basic-view .fc-day-top .fc-week-number {
     float: left;
     border-radius: 0 0 3px 0; }
@@ -1380,7 +1372,7 @@ h1 {
   .calendar .btn:focus {
     box-shadow: none; }
   .calendar .btn.btn-primary {
-    background: #002147;
+    background: #685044;
     color: #ffffff; }
   .calendar .form-group label {
     font-weight: 600;

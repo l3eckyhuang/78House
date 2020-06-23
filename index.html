@@ -87,16 +87,20 @@
 					// emphasizes business hours
 					businessHours: false,
 					defaultView: 'month',
+					titleFormat : "YYYY"+", "+"M"+"月",
+					contentHeight:"auto",
+					fixedWeekCount: false,
 					// header
 					header: {
 						left: 'title',
 						center: 'today prev,next',
 						right: ''
 					},
+					monthNames : ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"], //月份自定義命名
 					events: events,
 					eventRender: function(event, e) {
 						e.find(".fc-content").remove();
-						e.append("<i class='icon-cancel'></i>");
+						e.append("已預訂");
 					}
 				});
 			}

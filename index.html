@@ -101,6 +101,12 @@
 					eventRender: function(event, e) {
 						e.find(".fc-content").remove();
 						e.append("已預訂");
+					},
+					validRange: function(nowDate) {
+						return {
+							start: nowDate.clone().startOf('month'),
+							end: nowDate.clone().add(2, 'month')
+						}
 					}
 				});
 			}

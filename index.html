@@ -100,7 +100,6 @@
 					events: events,
 					eventRender: function(event, e) {
 						e.find(".fc-content").remove();
-						e.append("已預訂");
 					},
 					validRange: function(nowDate) {
 						return {
@@ -399,6 +398,7 @@
 			<div class="row align-items-center">
 				<div class="order-2 order-lg-1 col-12 col-lg-6 calendar">
 					<div id="calendar"></div>
+					<div style="color: #A5A58D;"><span class="fc-event-dot"></span>已預訂</div>
 				</div>
 				<div class="order-1 order-lg-2 col-12 col-lg-6">
 					<h2 class="section-title">78house 日曆</h2>

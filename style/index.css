@@ -655,8 +655,9 @@ h1 {
   .calendar .fc-event-dot:before {
     content: "";
     position: absolute;
-    left: -3px;
-    bottom: 2px;
+    left: calc(50% - 5px);
+    /*left: -3px;
+      bottom: 2px;*/
     width: 10px;
     height: 10px;
     background-color: #E6C3C3;
@@ -1346,9 +1347,9 @@ h1 {
     font-size: 16px;
     font-weight: 400; }
   .calendar .fc-day.fc-today {
-    background: rgba(52, 40, 104, 0.03); }
+    background: rgba(52, 40, 104, 0.08); }
   .calendar .fc-day.alert-info {
-    background: rgba(52, 40, 104, 0.03); }
+    background: rgba(52, 40, 104, 0.08); }
   .calendar .datepicker {
     z-index: 123456; }
   .calendar body {

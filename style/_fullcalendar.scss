@@ -340,8 +340,9 @@
   .fc-event-dot:before{
       content: "";
       position: absolute;
-      left: -3px;
-      bottom: 2px;
+      left: calc(50% - 5px);
+      /*left: -3px;
+      bottom: 2px;*/
       width: 10px;
       height: 10px;
       background-color: #E6C3C3;
@@ -1340,10 +1341,10 @@
       font-weight: 400;
   }
   .fc-day.fc-today{
-      background: rgba(52,40,104,.03);
+      background: rgba(52,40,104,.08);
   }
   .fc-day.alert-info{
-      background: rgba(52,40,104,.03);
+      background: rgba(52,40,104,.08);
   }
 
   .datepicker{
